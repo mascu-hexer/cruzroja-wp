@@ -2,7 +2,7 @@
 <footer>
         <div class="more-info-container">
             <div class="more-info-content">
-                <a href="#"><img src="assets/images/Logo-Hospital-Cruz-Roja-de-Cordoba.png" alt="Logo hospital Cruz Roja"></a>
+                <a href="#"><img src="wp-content/themes/cruzrojaTheme/assets/images/Logo-Hospital-Cruz-Roja-de-Cordoba.png" alt="Logo hospital Cruz Roja"></a>
                 <div class="phone">
                     <h3>Teléfono</h3>
                     <p>000 000 000</p>
@@ -13,10 +13,10 @@
                 <div class="rrss">
                     <h3>Síguenos</h3>
                     <div class="rrss">
-                        <div class="logo"><a href="#" target=""><img src="assets/images/x-ico.png" alt="x icon"></a></div>
-                        <div class="logo"><a href="#" target=""><img src="assets/images/youtube-ico.png" alt="youtube icon"></a></div>
-                        <div class="logo"><a href="#" target=""><img src="assets/images/facebook-ico.png" alt="facebook icon"></a></div>
-                        <div class="logo"><a href="#" target=""><img src="assets/images/instagram-ico.png" alt="instagram icon"></a></div>
+                        <div class="logo"><a href="#" target=""><img src="wp-content/themes/cruzrojaTheme/assets/images/x-ico.png" alt="x icon"></a></div>
+                        <div class="logo"><a href="#" target=""><img src="wp-content/themes/cruzrojaTheme/assets/images/youtube-ico.png" alt="youtube icon"></a></div>
+                        <div class="logo"><a href="#" target=""><img src="wp-content/themes/cruzrojaTheme/assets/images/facebook-ico.png" alt="facebook icon"></a></div>
+                        <div class="logo"><a href="#" target=""><img src="wp-content/themes/cruzrojaTheme/assets/images/instagram-ico.png" alt="instagram icon"></a></div>
                         
                         
                         
@@ -38,6 +38,7 @@
         </div>
     </footer>
 
-    <script src="assets/scripts/script.js"></script>
+    <?php wp_footer(); ?>
+    <!-- <script src="wp-content/themes/cruzrojaTheme/assets/scripts/script.js"></script> -->
 </body>
 </html>
