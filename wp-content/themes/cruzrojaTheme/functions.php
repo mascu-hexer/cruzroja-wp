@@ -17,3 +17,11 @@ function add_assets(){
     
 }
 
+if ( class_exists('ACF') ) {
+    // Importa el archivo de configuración de ACF
+    require_once get_template_directory() . '/inc/acf-fields.php';
+}
+
+    
+    
+
