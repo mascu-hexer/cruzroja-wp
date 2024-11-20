@@ -22,6 +22,15 @@ if ( class_exists('ACF') ) {
     require_once get_template_directory() . '/inc/acf-fields.php';
 }
 
+function add_personalizedtheme_menus()
+{
+    register_nav_menus(
+        array(
+            'menu-principal' => __('Principal')
+        )
+    );
+}
+add_action('init', 'add_personalizedtheme_menus');
     
     
 

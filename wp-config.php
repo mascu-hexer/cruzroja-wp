@@ -100,3 +100,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /** Sets up WordPress vars and included files. */
 require_once ABSPATH . 'wp-settings.php';
+
+
+define( 'ACF_PRO_LICENSE', 'b3JkZXJfaWQ9ODEzNjF8dHlwZT1wZXJzb25hbHxkYXRlPTIwMTYtMDUtMTEgMTI6MDg6Mzc=' );

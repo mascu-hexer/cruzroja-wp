@@ -28,6 +28,8 @@
                 <div class="frame86">
                     <p>Tu centro capilar en Córdoba</p>
                     <a href="#"><button class="secondary-button">Contacta</button></a>  
+
+                    <h2><?php the_field('slogan', 'option'); ?></h2>
                 </div>
             </div>
         </div>
