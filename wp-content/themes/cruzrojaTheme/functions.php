@@ -32,22 +32,16 @@ function add_personalizedtheme_menus()
 }
 add_action('init', 'add_personalizedtheme_menus');
 
-function permitir_webp($mimes) {
-    $mimes['webp'] = 'image/webp';
+function add_file_types_to_uploads( $mimes = array() ) {
+    if (current_user_can('administrator')) {
+        $mimes['svg'] = 'image/svg+xml';
+        $mimes['svgz'] = 'image/svg+xml';
+        $mimes['webp'] = 'image/webp';        
+    }
+    error_log(print_r($mimes, true)); // Añade esta línea para depuración
     return $mimes;
 }
-add_filter('mime_types', 'permitir_webp');
+add_filter( 'upload_mimes', 'add_file_types_to_uploads' );
 
-// Comprobar si el archivo WebP es procesable
-function mostrar_webp($result, $path) {
-    $info = @getimagesize($path);
-    $mime = isset($info['mime']) ? $info['mime'] : '';
-    if ($mime === 'image/webp') {
-        $result = true;
-    }
-    return $result;
-}
-add_filter('file_is_displayable_image', 'mostrar_webp', 10, 2);
-    
     
 
