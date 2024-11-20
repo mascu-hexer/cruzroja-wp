@@ -31,6 +31,23 @@ function add_personalizedtheme_menus()
     );
 }
 add_action('init', 'add_personalizedtheme_menus');
+
+function permitir_webp($mimes) {
+    $mimes['webp'] = 'image/webp';
+    return $mimes;
+}
+add_filter('mime_types', 'permitir_webp');
+
+// Comprobar si el archivo WebP es procesable
+function mostrar_webp($result, $path) {
+    $info = @getimagesize($path);
+    $mime = isset($info['mime']) ? $info['mime'] : '';
+    if ($mime === 'image/webp') {
+        $result = true;
+    }
+    return $result;
+}
+add_filter('file_is_displayable_image', 'mostrar_webp', 10, 2);
     
     
 
