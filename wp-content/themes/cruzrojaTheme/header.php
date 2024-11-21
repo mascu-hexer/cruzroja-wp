@@ -13,6 +13,7 @@
         <div class="tirilla-header hidden-header">
             <div class="info">
                 <p class="hidden-text"><?php echo esc_html(get_field('topHeader', 'option')['topHeaderLine1']); ?></p>
+                <!-- <h3> Te informamos gratis <a href="tel:+34957000000">957 000 000</a></h3> -->
                 <h3>
                     <?php echo esc_html( get_field('topHeader', 'option')['topHeaderLine2']); ?>
                     <span>
@@ -39,8 +40,10 @@
                 </div>
                 <div class="frame86">
                     <p><?php echo esc_html(get_field('bannerLogo', 'option')['eslogan']); ?></p>
-                    <!-- <p>Tu centro capilar en Córdoba</p> -->
-                    <a href="#"><button class="secondary-button">Contacta</button></a>  
+                    <!-- <a href="#"><button class="secondary-button">Contacta</button></a> --> 
+                    <a class="secondary-button" href="<?php echo esc_attr( get_field('botonContacta', 'option') ); ?>">
+                        <button><?php echo esc_html( get_field('botonContacta', 'option') ); ?></button>
+                    </a>
                 </div>
             </div>
         </div>
