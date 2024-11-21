@@ -40,10 +40,19 @@
                 </div>
                 <div class="frame86">
                     <p><?php echo esc_html(get_field('bannerLogo', 'option')['eslogan']); ?></p>
-                    <!-- <a href="#"><button class="secondary-button">Contacta</button></a> --> 
-                    <a class="secondary-button" href="<?php echo esc_attr( get_field('botonContacta', 'option') ); ?>">
-                        <button><?php echo esc_html( get_field('botonContacta', 'option') ); ?></button>
-                    </a>
+                                        
+                    <?php
+                    $link = get_field('bannerLogo', 'option')['botonContacta'];
+                    if( $link ):
+                        $url = $link['url'];
+                        $title = $link['title'];
+                        $target = $link['target'] ? $link['target'] : '_self';
+                    ?>
+                        <a class="boton-contacta" href="<?php echo esc_url( $url ); ?>" target="<?php echo esc_attr( $target ); ?>">
+                            <button class="secondary-button"><?php echo esc_html( $title ); ?></button>
+                        </a>
+                    <?php endif; ?>
+
                 </div>
             </div>
         </div>
