@@ -32,6 +32,7 @@ function add_personalizedtheme_menus()
 }
 add_action('init', 'add_personalizedtheme_menus');
 
+
 function add_file_types_to_uploads( $mimes = array() ) {
     if (current_user_can('administrator')) {
         $mimes['svg'] = 'image/svg+xml';

@@ -1,23 +1,12 @@
 <?php
 
-get_header();
-
-if(have_posts()){
-    while(have_posts()){
-        the_post();
-        the_title();
-        the_content();
-    }    
-}
-else{
-    echo "No se ha encontrado el contenido deseado.";
-}
-
-get_footer();
 
 
 
 
+
+
+//EJEMPLO
 
 
 //echo "<h1>";

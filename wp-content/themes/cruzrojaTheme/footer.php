@@ -2,7 +2,19 @@
 <footer>
         <div class="more-info-container">
             <div class="more-info-content">
-                <a href="#"><img src="wp-content/themes/cruzrojaTheme/assets/images/Logo-Hospital-Cruz-Roja-de-Cordoba.png" alt="Logo hospital Cruz Roja"></a>
+                <div class="logo-hospital">
+                    <?php $image = get_field('logo', 'option');
+                        if( !empty($image) )
+                        {
+                        $title = $image['title'];
+                        $alt = $image['alt'];
+                        $alt = ($alt)?$alt:$title; ?>
+                        <a href="<?php bloginfo( 'url' ) ?>" aria-label="Volver al inicio">
+                            <img src="<?php echo $image['url']; ?>" alt="<?php echo $alt; ?>" title="<?php echo $title; ?>" />
+                        </a>
+                    <?php } ?>
+                </div>
+                
                 <div class="phone">
                     <h3>Teléfono</h3>
                     <p>000 000 000</p>

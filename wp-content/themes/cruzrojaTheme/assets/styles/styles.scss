@@ -218,9 +218,15 @@ header{
             }
     
             span {
-                font-size: 16px;
-                font-weight: 700;
+                a{
+                    font-size: 16px;
+                    font-weight: 700;
+                    color: #FFFFFF;
+                    text-decoration: none;
+                }                
             }
+
+            
     
             @media (min-width: $laptop) {
                 flex-direction: row;

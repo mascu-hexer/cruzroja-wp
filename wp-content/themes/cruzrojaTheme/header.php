@@ -25,15 +25,21 @@
         </div>
         <div class="menu-header hidden-header">
             <div class="frame39">
-                <div id="logo-hospital">
-                    <a href="#">
-                        <?php if( get_field('logo', 'option') ): ?>
-                            <img src="<?php echo esc_url( get_field('logo', 'option') ); ?>" />
-                        <?php endif; ?>
-                    </a>
+                <div class="logo-hospital">
+                    <?php $image = get_field('logo', 'option');
+                        if( !empty($image) )
+                        {
+                        $title = $image['title'];
+                        $alt = $image['alt'];
+                        $alt = ($alt)?$alt:$title; ?>
+                        <a href="<?php bloginfo( 'url' ) ?>" aria-label="Volver al inicio">
+                            <img src="<?php echo $image['url']; ?>" alt="<?php echo $alt; ?>" title="<?php echo $title; ?>" />
+                        </a>
+                    <?php } ?>
                 </div>
                 <div class="frame86">
-                    <p>Tu centro capilar en Córdoba</p>
+                    <p><?php echo esc_html(get_field('bannerLogo', 'option')['eslogan']); ?></p>
+                    <!-- <p>Tu centro capilar en Córdoba</p> -->
                     <a href="#"><button class="secondary-button">Contacta</button></a>  
                 </div>
             </div>
