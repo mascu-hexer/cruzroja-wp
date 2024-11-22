@@ -2,6 +2,13 @@
 
 
 <main class="Main">
+
+    <?php if (have_rows('seccionesHome')): ?>
+    
+        <?php while (have_rows('seccionesHome')): 
+            the_row(); ?>
+
+
         <section class="header-form">
             <picture>
                 <source media="(min-width:1024px)" srcset="assets/images/Rectangle158-desktop-1440.webp">
@@ -11,83 +18,91 @@
             </picture>          
             <div class="header-form-main-container">
                     
+                <?php if (get_row_layout() == 'formulario'){ 
+                    
+                    $titulo = get_sub_field('formulario')['titulo'];
+                    $subtitulo = get_sub_field('formulario')['subtitulo'];
+                    $listaServicios = get_sub_field('formulario')['listaServicios'];
+                    $info = get_sub_field('formulario')['+info'];
+                    $datosFormulario = get_sub_field('formulario')['datosFormulario'];
 
+                ?>
+                                       
                 <div class="form-box">
                     <div class="titular">
                         <div class="frame33">
-                            <p>Tu salud capilar</p> 
-                            <span>en las mejores manos</span>
+                            <p><?php echo esc_html($titulo); ?></p> 
+                            <span><?php echo esc_html($subtitulo); ?></span>
                         </div>
                     </div>
-    
-                    <div class="insight">
-                        <ul class="frame32">                    
-                            <li class="element-inisht">
-                                <div class="icon">
-                                    <img src="./assets/images/check32x32.png" alt="checklist">
-                                </div>
-                                <div class="frame30">
-                                    <p>Microinjerto con técnica FUE</p>
-                                </div>
-                            </li>
-                            <li class="element-inisht">
-                                <div class="icon">
-                                    <img src="./assets/images/check32x32.png" alt="checklist">
-                                </div>
-                                <div class="frame30">
-                                    <p>Con la seguridad y garantía que ofrece el Hospital Cruz Roja de Córdoba</p>
-                                </div>
-                            </li>
-                            <li class="element-inisht">
-                                <div class="icon">
-                                    <img src="./assets/images/check32x32.png" alt="checklist">
-                                </div>
-                                <div class="frame30">
-                                    <p>Tratamiento y seguimiento con los mejores especialistas</p>
-                                </div>
-                            </li>
-                            <li class="element-inisht">
-                                <div class="icon">
-                                    <img src="./assets/images/check32x32.png" alt="checklist">
-                                </div>
-                                <div class="frame30">
-                                    <p>Resultados naturales</p>
-                                </div>
-                            </li>
-                            <li class="element-inisht">
-                                <div class="icon">
-                                    <img src="./assets/images/check32x32.png" alt="checklist">
-                                </div>
-                                <div class="frame30">
-                                    <p>Financiación hasta 72 meses</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
 
-                    
-                    
+                    <?php if (!empty($listaServicios)): ?>
+                        <div class="insight">
+                            <ul class="frame32">
+                                <?php foreach($listaServicios as $servicio): ?>
+                                    <li class="element-inisht">
+                                        <div class="icon">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/check32x32.png" 
+                                            alt="checklist">
+                                        </div>
+                                        <div class="frame30">
+                                            <p><?php echo esc_html($servicio['titulo']) ?></p>
+                                        </div>
+                                    </li>
+                                <?php endforeach; ?>
+                            </ul>
+                        </div>
+                    <?php endif; ?>
+                                                                          
                     <div class="frame93">
                         <form method="" action="blank">
                             <div class="frame37">
-                                <h3>Solicita más información</h3>
                                 <div class="frame36">
-                                    <input type="text" name="name" placeholder="Nombre*"/>
+                                    <?php 
+                                        echo do_shortcode($datosFormulario); 
+                                    ?>
+                                    <!-- <input type="text" name="name" placeholder="Nombre*"/>
                                     <input type="text" name="phone" placeholder="Teléfono*"/>
                                     <input type="text" name="mail" placeholder="Email*"/>
                                     <div class="policy-checkbox">
                                         <input type="checkbox" name="privacy-policy"> 
                                         <p>He leído y Acepto las <a href="#">condiciones Generales</a> y la <a href="#">Política de privacidad</a></p>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <a href="#"><button type="submit">Enviar</button></a>  
                             </div>
                         </form>
-                    </div>                
+                    </div>     
+
                 </div>
+
+                <?php } ?> <!-- cierre de if (get_row_layout() == 'formulario') -->
             </div>
         </section>
 
+        <?php if(get_row_layout() == 'servicios'): ?>
+            <section class="skills">
+                <div class="skills-header">
+                    <p><?php echo get_sub_field('titulo'); ?></p>
+                </div>
+                <div class="skills-main-container">
+                    <?php if(have_rows('skills')): ?>
+                        <?php while(have_rows('skills')): the_row(); ?>
+                            <div class="skill1">
+                                <div class="frame63">
+                                    <img src="<?php echo get_sub_field('icono')['url']; ?>" alt="<?php echo get_sub_field('icono')['alt']; ?>">
+                                    <div class="frame62">
+                                        <h3><?php echo get_sub_field('titulo'); ?></h3>
+                                        <p><?php echo get_sub_field('descripcion'); ?></p>
+                                        <a href="<?php echo get_sub_field('link'); ?>" target="_blank">Saber más</a>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php endwhile; ?>
+                    <?php endif; ?>
+                </div>
+            </section>
+        <?php endif; ?>
         <section class="skills">
             <div class="skills-header">
                 <p>Tu injerto capilar en Córdoba en manos del Hospital Cruz Roja</p>
@@ -444,8 +459,13 @@
                     </div>
                 </div>    
             </div>
-        </section>        
-    </main>
+        </section> 
+
+        <?php endwhile; ?>
+        
+    <?php endif; ?>  <!--endif (have_rows('seccionesHome'))-->
+
+</main>
 
 
 

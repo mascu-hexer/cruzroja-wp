@@ -62,7 +62,7 @@ add_filter( 'upload_mimes', 'add_file_types_to_uploads' );
 function mostrar_secciones_flexibles ( $objetoPost ){
 // check if the flexible content field has rows of data
 
-if( have_rows('seccionesHome', $objetoPost) ) {
+/* if( have_rows('seccionesHome', $objetoPost) ) {
     // loop through the rows of data
     while ( have_rows('seccionesHome') ) {
     the_row();
@@ -101,7 +101,7 @@ if( have_rows('seccionesHome', $objetoPost) ) {
 }
 else {
     // no layouts found
-}
+} */
 }
 
 
