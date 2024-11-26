@@ -1,13 +1,10 @@
 <?php 
-
 $doctores = get_sub_field('profesionales');
 ?>
 
-
 <section class="doctors">
     <div class="doctors-main-container">
-        <picture>
-            <!--<source media="(min-width:1440px)" srcset="assets/images/draAboy-desktop.webp">-->
+        <picture>            
             <source media="(min-width:700px)" srcset="assets/images/draAboy-desktop.webp">
             <source media="(min-width:500px)" srcset="assets/images/draAboy-mobile.webp">
             <img src="assets/images/draAboy-mobile.webp" alt="Dra. Pilar Aboy">

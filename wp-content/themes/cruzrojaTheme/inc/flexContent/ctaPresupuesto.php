@@ -14,9 +14,3 @@ $boton = get_sub_field('botonSolicitar');
     </div>
 </section>
 
-
-<!-- CTA call to action -->
-
-<!-- echo '<pre>'; 
-echo var_dump($boton);
-echo '</pre>'; -->

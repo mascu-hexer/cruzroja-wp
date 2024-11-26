@@ -21,18 +21,18 @@ if( have_rows('seccionesHome') ){
             case 'bannerPresupuesto':
                 include 'ctaPresupuesto.php';
                 break;
-            /* case 'faq':
+            case 'faq':
                 include 'faq.php';
                 break;
-            case 'reviewsSlider':
-                include 'reviewsSlider.php';
+            case 'sliderValoraciones':
+                include 'sliderValoraciones.php';
                 break;
-            case 'contact':
-                include 'contact.php';
+            case 'contacto':
+                include 'contacto.php';
                 break;
             case 'galeriaImagenes':
-                include 'galeriaImagenes.php'
-                break; */
+                include 'galeriaImagenes.php';
+                break;
         }
     } 
 }

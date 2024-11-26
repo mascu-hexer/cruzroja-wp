@@ -19,12 +19,12 @@ function add_assets(){
     // Encolar el archivo CSS de Swiper
     wp_enqueue_style(
         'swiper-style', 
-        'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
+        get_template_directory_uri() . '/assets/styles/swiper-bundle.min.css');
     
     // Encolar el archivo JS de Swiper
     wp_enqueue_script(
         'swiper-script', 
-        'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', 
+        get_template_directory_uri() . '/assets/scripts/swiper-bundle.min.js', 
         array(), 
         null, 
         false);

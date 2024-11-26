@@ -995,7 +995,7 @@ main .faq {
 main .faq .faq-main-container {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 10px;
 }
 main .faq .faq-main-container .faq-header {
   font-family: "Montserrat";
@@ -1004,6 +1004,7 @@ main .faq .faq-main-container .faq-header {
   line-height: 24.28px;
   padding: 0px 20px;
   text-align: center;
+  margin-bottom: 50px;
   color: #011E41;
 }
 main .faq .faq-main-container .faq-header::after {
@@ -1194,6 +1195,9 @@ main .reviews-slider .wrap-swiper .swiper .swiper-button-next, main .reviews-sli
     margin: 0 auto;
     align-items: center;
   }
+  main .reviews-slider .wrap-swiper .swiper .swiper-wrapper .swiper-slide .new-review .new-review-text {
+    line-height: 27.12px;
+  }
   main .reviews-slider .wrap-swiper .swiper .swiper-wrapper .swiper-slide .new-review, main .reviews-slider .wrap-swiper .swiper .swiper-wrapper .swiper-slide .new-review .stars {
     align-items: start;
   }
@@ -1304,7 +1308,7 @@ main .contact .contact-main-container .frame51 .inputs-container .policy-checkbo
 main .contact .contact-main-container .frame51 .inputs-container .policy-checkbox p span {
   font-weight: 700;
 }
-main .contact .contact-main-container .frame51 button {
+main .contact .contact-main-container .frame51 a button {
   background-color: #FFFFFF;
   width: 100%;
   max-width: 133px;
@@ -1335,6 +1339,8 @@ main .contact .contact-main-container .frame51 button {
   }
   main .contact .contact-main-container .frame51 {
     min-width: 440px;
+    max-width: 1051px;
+    width: 100%;
     display: flex;
     flex-direction: row;
     margin: 0;
@@ -1353,7 +1359,8 @@ main .contact .contact-main-container .frame51 button {
   }
   main .contact .contact-main-container .frame51 .inputs-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    gap: 80px;
   }
   main .contact .contact-main-container .frame51 .inputs-container .inputs-text {
     display: flex;
@@ -1363,6 +1370,8 @@ main .contact .contact-main-container .frame51 button {
   }
   main .contact .contact-main-container .frame51 .inputs-container .inputs-text input {
     min-width: 200px;
+    max-width: 200px;
+    width: 100%;
     margin-bottom: 0px;
   }
   main .contact .contact-main-container .frame51 .inputs-container .policy-checkbox {
