@@ -687,7 +687,7 @@ main .header-form .header-form-main-container .form-box .frame93 form .frame37 a
     padding: 18.5px 51.5px;
   }
 }
-main .skills .skills-header {
+main .servicios .servicios-header {
   font-family: "Montserrat";
   font-size: 25px;
   font-weight: 600;
@@ -698,7 +698,7 @@ main .skills .skills-header {
   text-align: center;
   color: #011E41;
 }
-main .skills .skills-header::after {
+main .servicios .servicios-header::after {
   content: "";
   display: block;
   width: 100%;
@@ -707,27 +707,27 @@ main .skills .skills-header::after {
   margin-top: 15px;
   margin-bottom: 25px;
 }
-main .skills .skills-main-container {
+main .servicios .servicios-main-container {
   display: flex;
   flex-direction: column;
   padding-top: 0px;
 }
-main .skills .skills-main-container .skill1, main .skills .skills-main-container .skill2, main .skills .skills-main-container .skill3 {
+main .servicios .servicios-main-container .servicio {
   display: flex;
   padding: 40px 32.5px;
 }
-main .skills .skills-main-container .skill1 .frame63, main .skills .skills-main-container .skill2 .frame63, main .skills .skills-main-container .skill3 .frame63 {
+main .servicios .servicios-main-container .servicio .servicioContent {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-main .skills .skills-main-container .skill1 .frame63 img, main .skills .skills-main-container .skill2 .frame63 img, main .skills .skills-main-container .skill3 .frame63 img {
+main .servicios .servicios-main-container .servicio .servicioContent img {
   -o-object-fit: contain;
      object-fit: contain;
   align-self: center;
   margin-bottom: 20px;
 }
-main .skills .skills-main-container .skill1 .frame63 h3, main .skills .skills-main-container .skill2 .frame63 h3, main .skills .skills-main-container .skill3 .frame63 h3 {
+main .servicios .servicios-main-container .servicio .servicioContent h3 {
   font-family: "Montserrat";
   font-size: 20px;
   font-weight: 600;
@@ -736,7 +736,7 @@ main .skills .skills-main-container .skill1 .frame63 h3, main .skills .skills-ma
   text-align: center;
   margin-bottom: 20px;
 }
-main .skills .skills-main-container .skill1 .frame63 p, main .skills .skills-main-container .skill2 .frame63 p, main .skills .skills-main-container .skill3 .frame63 p {
+main .servicios .servicios-main-container .servicio .servicioContent p {
   font-family: "OpenSans";
   font-size: 18px;
   font-weight: 400;
@@ -744,7 +744,7 @@ main .skills .skills-main-container .skill1 .frame63 p, main .skills .skills-mai
   color: #323232;
   padding-bottom: 0px;
 }
-main .skills .skills-main-container .skill1 .frame63 a, main .skills .skills-main-container .skill2 .frame63 a, main .skills .skills-main-container .skill3 .frame63 a {
+main .servicios .servicios-main-container .servicio .servicioContent a {
   display: block;
   text-align: center;
   font-family: "Montserrat";
@@ -755,33 +755,33 @@ main .skills .skills-main-container .skill1 .frame63 a, main .skills .skills-mai
   padding-top: 10px;
 }
 @media (min-width: 1024px) {
-  main .skills {
+  main .servicios {
     width: 100%;
     align-items: center;
     justify-content: center;
     display: flex;
     flex-direction: column;
   }
-  main .skills .skills-header {
+  main .servicios .servicios-header {
     width: 100%;
     display: flex;
     padding: 56.13px 10px 20px 10px;
     flex-direction: column;
     align-items: center;
   }
-  main .skills .skills-header p {
+  main .servicios .servicios-header p {
     max-width: 50%;
     font-size: 40px;
     font-weight: 600;
     line-height: 52.96px;
     text-align: center;
   }
-  main .skills .skills-header::after {
+  main .servicios .servicios-header::after {
     content: "";
     display: block;
     width: 30%;
   }
-  main .skills .skills-main-container {
+  main .servicios .servicios-main-container {
     display: flex;
     flex-direction: row;
     max-width: 1200px;
@@ -789,37 +789,37 @@ main .skills .skills-main-container .skill1 .frame63 a, main .skills .skills-mai
     margin-bottom: 56.13px;
   }
 }
-main .seo-info {
+main .nosotros {
   display: flex;
   flex-direction: column;
   padding: 8px 32.5px;
   text-align: center;
 }
-main .seo-info .main-container {
+main .nosotros .main-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-main .seo-info .main-container h3 {
+main .nosotros .main-container h3 {
   font-family: "Montserrat";
   font-size: 20px;
   font-weight: 600;
   line-height: 24.38px;
   color: #011E41;
 }
-main .seo-info .main-container .acordeon label {
+main .nosotros .main-container .acordeon label {
   display: flex;
   flex-direction: column;
   border: none;
 }
-main .seo-info .main-container .acordeon label .frame91 {
+main .nosotros .main-container .acordeon label .frame91 {
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 0px 17px;
   width: 100%;
 }
-main .seo-info .main-container .acordeon label .frame91::before, main .seo-info .main-container .acordeon label .frame91::after {
+main .nosotros .main-container .acordeon label .frame91::before, main .nosotros .main-container .acordeon label .frame91::after {
   content: "";
   display: block;
   width: 100%;
@@ -827,25 +827,28 @@ main .seo-info .main-container .acordeon label .frame91::before, main .seo-info 
   background-color: #F5333F;
   margin: 15px 0;
 }
-main .seo-info .main-container .acordeon label .frame91 img {
+main .nosotros .main-container .acordeon label .frame91 img {
   max-width: 32px;
   max-height: 32px;
   width: 100%;
 }
-main .seo-info .main-container .acordeon label:hover {
+main .nosotros .main-container .acordeon label:hover {
   background-color: white;
 }
-main .seo-info .main-container .acordeon input[type=checkbox]:checked + label + .contenido-acordeon {
+main .nosotros .main-container .acordeon input[type=checkbox]:checked + label + .contenido-acordeon {
   padding: 20px 0px;
 }
 @media (min-width: 1024px) {
-  main .seo-info {
+  main .nosotros {
     margin-bottom: 65px;
   }
-  main .seo-info .main-container .acordeon label .frame91 {
+  main .nosotros .main-container h3 {
+    font-size: 30px;
+  }
+  main .nosotros .main-container .acordeon label .frame91 {
     max-width: 302px;
   }
-  main .seo-info .main-container .acordeon label:hover {
+  main .nosotros .main-container .acordeon label:hover {
     background-color: white;
   }
 }
@@ -881,19 +884,19 @@ main .doctors .doctors-main-container .text-container {
   flex-direction: column;
   gap: 20px;
 }
-main .doctors .doctors-main-container .text-container .frame74 {
+main .doctors .doctors-main-container .text-container .doctorInfo {
   display: flex;
   flex-direction: column;
   gap: 11px;
 }
-main .doctors .doctors-main-container .text-container .frame74 h3 {
+main .doctors .doctors-main-container .text-container .doctorInfo h3 {
   font-family: "Montserrat";
   font-size: 25px;
   font-weight: 700;
   line-height: 30.48px;
   color: #011E41;
 }
-main .doctors .doctors-main-container .text-container .frame74 p {
+main .doctors .doctors-main-container .text-container .doctorInfo p {
   font-family: "OpenSans";
   font-size: 20px;
   font-weight: 600;

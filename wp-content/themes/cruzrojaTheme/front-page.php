@@ -3,215 +3,33 @@
 
 <main class="Main">
 
-    <?php if (have_rows('seccionesHome')): ?>
+    <?php
+        if ( have_posts() )
+        {
+        while ( have_posts())
+        {
+            the_post();
+            ?>
+            <div class="home-content">
+                <div class="the-content">
+                    <?php the_content(); 
+                    
+                    include 'inc/flexContent/flexContentController.php';
+
+                    ?>
+                </div>
+            </div>
+            <?php
+        }
+        }
+        ?>
+
+
+    <?php /*
     
-        <?php while (have_rows('seccionesHome')): 
-            the_row(); ?>
+    <?php mostrar_secciones_flexibles( $post ); ?>
 
-
-        <section class="header-form">
-            <picture>
-                <source media="(min-width:1024px)" srcset="assets/images/Rectangle158-desktop-1440.webp">
-                <source media="(min-width:750px)" srcset="assets/images/Rectangle158-desktop-1024.webp">
-                <source media="(min-width:500px)" srcset="assets/images/Rectangle158-mobile.webp">
-                <img src="assets/images/Rectangle158-mobile.webp" alt="Paciente sonriendo">
-            </picture>          
-            <div class="header-form-main-container">
-                    
-                <?php if (get_row_layout() == 'formulario'){ 
-                    
-                    $titulo = get_sub_field('formulario')['titulo'];
-                    $subtitulo = get_sub_field('formulario')['subtitulo'];
-                    $listaServicios = get_sub_field('formulario')['listaServicios'];
-                    $info = get_sub_field('formulario')['+info'];
-                    $datosFormulario = get_sub_field('formulario')['datosFormulario'];
-
-                ?>
-                                       
-                <div class="form-box">
-                    <div class="titular">
-                        <div class="frame33">
-                            <p><?php echo esc_html($titulo); ?></p> 
-                            <span><?php echo esc_html($subtitulo); ?></span>
-                        </div>
-                    </div>
-
-                    <?php if (!empty($listaServicios)): ?>
-                        <div class="insight">
-                            <ul class="frame32">
-                                <?php foreach($listaServicios as $servicio): ?>
-                                    <li class="element-inisht">
-                                        <div class="icon">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/check32x32.png" 
-                                            alt="checklist">
-                                        </div>
-                                        <div class="frame30">
-                                            <p><?php echo esc_html($servicio['titulo']) ?></p>
-                                        </div>
-                                    </li>
-                                <?php endforeach; ?>
-                            </ul>
-                        </div>
-                    <?php endif; ?>
-                                                                          
-                    <div class="frame93">
-                        <form method="" action="blank">
-                            <div class="frame37">
-                                <div class="frame36">
-                                    <?php 
-                                        echo do_shortcode($datosFormulario); 
-                                    ?>
-                                    <!-- <input type="text" name="name" placeholder="Nombre*"/>
-                                    <input type="text" name="phone" placeholder="Teléfono*"/>
-                                    <input type="text" name="mail" placeholder="Email*"/>
-                                    <div class="policy-checkbox">
-                                        <input type="checkbox" name="privacy-policy"> 
-                                        <p>He leído y Acepto las <a href="#">condiciones Generales</a> y la <a href="#">Política de privacidad</a></p>
-                                    </div> -->
-                                </div>
-                                <a href="#"><button type="submit">Enviar</button></a>  
-                            </div>
-                        </form>
-                    </div>     
-
-                </div>
-
-                <?php } ?> <!-- cierre de if (get_row_layout() == 'formulario') -->
-            </div>
-        </section>
-
-        <?php if(get_row_layout() == 'servicios'): ?>
-            <section class="skills">
-                <div class="skills-header">
-                    <p><?php echo get_sub_field('titulo'); ?></p>
-                </div>
-                <div class="skills-main-container">
-                    <?php if(have_rows('skills')): ?>
-                        <?php while(have_rows('skills')): the_row(); ?>
-                            <div class="skill1">
-                                <div class="frame63">
-                                    <img src="<?php echo get_sub_field('icono')['url']; ?>" alt="<?php echo get_sub_field('icono')['alt']; ?>">
-                                    <div class="frame62">
-                                        <h3><?php echo get_sub_field('titulo'); ?></h3>
-                                        <p><?php echo get_sub_field('descripcion'); ?></p>
-                                        <a href="<?php echo get_sub_field('link'); ?>" target="_blank">Saber más</a>
-                                    </div>
-                                </div>
-                            </div>
-                        <?php endwhile; ?>
-                    <?php endif; ?>
-                </div>
-            </section>
-        <?php endif; ?>
-        <section class="skills">
-            <div class="skills-header">
-                <p>Tu injerto capilar en Córdoba en manos del Hospital Cruz Roja</p>
-            </div>
-            <div class="skills-main-container">
-                <div class="skill1">
-                    <div class="frame63">
-                        <img src="assets/images/diagnostico.png" alt="Diagnóstico">
-                        <div class="frame62">
-                            <h3>Diagnóstico</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet 
-                                luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim 
-                                praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi 
-                                etiam dignissim diam quis enim lobortis scelerisque fermentum dui faucibus in ornare 
-                                quam viverra orci sagittis eu volutpat odio facilisis mauris sit amet massa</p>
-                            <a href="" target="">Saber más</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill2">
-                    <div class="frame63">
-                        <img src="assets/images/implante.png" alt="Injerto capilar">
-                        <div class="frame62">
-                            <h3>Injerto Capilar</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet 
-                                luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim 
-                                praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi 
-                                etiam dignissim diam quis enim lobortis scelerisque fermentum dui faucibus in ornare 
-                                quam viverra orci sagittis eu volutpat odio facilisis mauris sit amet massa</p>
-                            <a href="" target="">Saber más</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill3">
-                    <div class="frame63">
-                        <img src="assets/images/mesoterapia.png" alt="Mesoterapia">
-                        <div class="frame62">
-                            <h3>Mesoterapia</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet 
-                                luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim 
-                                praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi 
-                                etiam dignissim diam quis enim lobortis scelerisque fermentum dui faucibus in ornare 
-                                quam viverra orci sagittis eu volutpat odio facilisis mauris sit amet massa</p>
-                            <a href="" target="">Saber más</a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <section class="seo-info" id="nosotros">
-            <div class="main-container">
-                <!-- <h3>Nuestro centro capilar en Córdoba</h3>
-                <div class="frame91">
-                    <img src="assets/images/CaretDown.png" alt="separator">
-                    
-                </div> -->
-                <div class="acordeon">
-                    <input type="checkbox" name="acordeon" id="btn-nosotros" class="btn-acordeon">
-                    <label for="btn-nosotros">
-                        <h3>Nuestro centro capilar en Córdoba</h3>
-                        <div class="frame91">
-                            <img src="assets/images/CaretDown.png" alt="separator">                            
-                        </div>
-                    </label>
-                    <div class="contenido-acordeon">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id nulla eu libero 
-                            laoreet eleifend vestibulum id metus. Pellentesque malesuada condimentum vulputate. 
-                            Proin eleifend augue sed urna placerat vulputate. 
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id nulla eu libero 
-                            laoreet eleifend vestibulum id metus. Pellentesque malesuada condimentum vulputate. 
-                            Proin eleifend augue sed urna placerat vulputate. Interdum et malesuada fames ac 
-                            ante ipsum primis in faucibus. Nullam interdum efficitur tortor
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="doctors">
-            <div class="doctors-main-container">
-                <picture>
-                    <!--<source media="(min-width:1440px)" srcset="assets/images/draAboy-desktop.webp">-->
-                    <source media="(min-width:700px)" srcset="assets/images/draAboy-desktop.webp">
-                    <source media="(min-width:500px)" srcset="assets/images/draAboy-mobile.webp">
-                    <img src="assets/images/draAboy-mobile.webp" alt="Dra. Pilar Aboy">
-                </picture>
-                <div class="text-container">
-                    <div class="frame74">
-                        <h3>Dra. Pilar Aboy</h3>
-                        <p>Especialista en Medicina Estética</p>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus 
-                        venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent 
-                        elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim 
-                        diam quis enim lobortis scelerisque fermentum dui faucibus in ornare quam viverra orci 
-                        sagittis eu volutpat odio facilisis mauris sit amet massa,
-                    </p>
-                    <p>Vitae tortor condimentum lacinia quis vel eros donec ac odio tempor orci dapibus ultrices 
-                        in iaculis nunc sed augue lacus, viverra vitae congue eu, consequat ac felis donec et odio 
-                        pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus
-                    </p>
-                </div>
-            </div>
-        </section>
+    
 
         <section class="budget" id="presupuesto">
             <div class="budget-container">
@@ -465,6 +283,8 @@
         
     <?php endif; ?>  <!--endif (have_rows('seccionesHome'))-->
 
+    */
+    ?>
 </main>
 
 

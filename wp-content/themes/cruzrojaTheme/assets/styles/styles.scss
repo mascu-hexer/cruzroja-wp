@@ -807,10 +807,10 @@ main{
         }
     }
 
-    .skills{
+    .servicios{
         //padding: 40px 32.5px;
 
-        .skills-header{
+        .servicios-header{
             font-family: "Montserrat";
             font-size: 25px;
             font-weight: 600;
@@ -832,16 +832,16 @@ main{
             }
         }
 
-        .skills-main-container{
+        .servicios-main-container{
             display: flex;
             flex-direction: column;            
             padding-top: 0px;
            
-            .skill1, .skill2, .skill3{
+            .servicio{
                 display: flex;                
                 padding: 40px 32.5px;
                 
-                .frame63{
+                .servicioContent{
                     display: flex;
                     flex-direction: column;
                     gap: 20px;
@@ -898,7 +898,7 @@ main{
             display: flex;
             flex-direction: column;
 
-            .skills-header{
+            .servicios-header{
                 width:100%;
                 display: flex;
                 padding: 56.13px 10px 20px 10px;
@@ -919,7 +919,7 @@ main{
                     
                 }
             }
-            .skills-main-container{
+            .servicios-main-container{
                 display: flex;
                 flex-direction: row;
                 max-width: 1200px;
@@ -929,7 +929,7 @@ main{
         }
     }
 
-    .seo-info {
+    .nosotros {
         display: flex;
         flex-direction: column;
         padding: 8px 32.5px;
@@ -991,8 +991,13 @@ main{
     
         }
         @media (min-width: $laptop){      
-            margin-bottom: 65px;         
-            .main-container .acordeon label{
+            margin-bottom: 65px;
+                  
+            .main-container {
+                h3 {
+                    font-size: 30px;
+                }  
+                .acordeon label{
                 .frame91{
                     max-width: 302px;
                 }
@@ -1000,6 +1005,7 @@ main{
                 &:hover{
                     background-color: white;  
                 }            
+                }
             }
         }
     }
@@ -1037,7 +1043,7 @@ main{
                 flex-direction: column;
                 gap:20px;
 
-                .frame74{
+                .doctorInfo{
                     display: flex;
                     flex-direction: column;
                     gap: 11px;
