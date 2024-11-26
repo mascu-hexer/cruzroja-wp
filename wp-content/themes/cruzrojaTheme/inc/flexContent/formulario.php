@@ -8,18 +8,15 @@
     <div class="header-form-main-container">
         
         <?php             
-            $titulo = get_sub_field('formulario')['titulo'];
-            $subtitulo = get_sub_field('formulario')['subtitulo'];
-            $listaServicios = get_sub_field('formulario')['listaServicios'];
-            $info = get_sub_field('formulario')['+info'];
-            $datosFormulario = get_sub_field('formulario')['datosFormulario'];
+            $formulario = get_sub_field('formulario');
+            $listaServicios = $formulario['listaServicios'];
         ?>
                                 
         <div class="form-box">
             <div class="titular">
                 <div class="frame33">
-                    <p><?php echo esc_html($titulo); ?></p> 
-                    <span><?php echo esc_html($subtitulo); ?></span>
+                    <p><?php echo esc_html($formulario['titulo']); ?></p> 
+                    <span><?php echo esc_html($formulario['subtitulo']); ?></span>
                 </div>
             </div>
 
@@ -46,7 +43,7 @@
                     <div class="frame37">
                         <div class="frame36">
                             <?php 
-                                echo do_shortcode($datosFormulario); 
+                                echo do_shortcode($formulario['datosFormulario']); 
                             ?>
                             <!-- <input type="text" name="name" placeholder="Nombre*"/>
                             <input type="text" name="phone" placeholder="Teléfono*"/>
@@ -56,7 +53,18 @@
                                 <p>He leído y Acepto las <a href="#">condiciones Generales</a> y la <a href="#">Política de privacidad</a></p>
                             </div> -->
                         </div>
-                        <a href="#"><button type="submit">Enviar</button></a>  
+                        <?php $btnEnviar = $formulario['btnenviar'];
+                        if( $btnEnviar ):
+                            $url = $btnEnviar['url'];
+                            $title = $btnEnviar['title'];
+                            $target = $btnEnviar['target'] ? $link['target'] : '_self';
+                        ?> 
+                        
+                        <a href="<?php echo esc_url($url); ?>" target="<?php echo esc_html($target); ?>">
+                            <button><?php echo esc_html($title); ?></button>
+                        </a>  
+                        <?php endif; ?>
+                        
                     </div>
                 </form>
             </div>    

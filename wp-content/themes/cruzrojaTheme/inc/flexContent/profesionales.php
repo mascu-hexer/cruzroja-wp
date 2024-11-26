@@ -1,8 +1,6 @@
 <?php 
 
-$doctor = get_sub_field('profesionales')['nombre'];
-$especialidad = get_sub_field('profesionales')['especialidad'];
-$descripcion = get_sub_field('profesionales')['descripcion'];
+$doctores = get_sub_field('profesionales');
 ?>
 
 
@@ -16,10 +14,10 @@ $descripcion = get_sub_field('profesionales')['descripcion'];
         </picture>
         <div class="text-container">
             <div class="doctorInfo">
-                <h3><?php echo esc_html($doctor); ?></h3>
-                <p><?php echo esc_html($especialidad); ?></p>
+                <h3><?php echo esc_html($doctores['nombre']); ?></h3>
+                <p><?php echo esc_html($doctores['especialidad']); ?></p>
             </div>
-            <p><?php echo esc_html($descripcion); ?></p>
+            <p><?php echo $doctores['descripcion']; ?></p>
         </div>
     </div>
 </section>

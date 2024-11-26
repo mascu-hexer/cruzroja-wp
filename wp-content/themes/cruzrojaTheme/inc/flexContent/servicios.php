@@ -1,6 +1,7 @@
 <?php             
     $encabezado = get_sub_field('encabezado');
     $listaServicios = get_sub_field('listaServicios');
+    
 ?>
 
 <section class="servicios">
@@ -24,13 +25,18 @@
                         <img src="<?php echo $image['url']; ?>" 
                             alt="<?php echo $alt; ?>" 
                             title="<?php echo $title; ?>" />
-                    <?php } 
+                    <?php }                 
                 ?>
             
                 <div class="ServiceData">
                     <h3><?php echo esc_html($servicio['titulo']) ?></h3>
                     <p><?php echo esc_html($servicio['descripcion']); ?></p>
-                    <a href="<?php echo esc_html($servicio['linkSaberMas']); ?>" target="blank">Saber más</a>
+
+                    <?php $link = $servicio['linkSaberMas']; ?>
+
+                    <a href="<?php echo esc_html($link['url']); ?>" target="blank">
+                        <?php echo esc_html($link['title']) ?>                        
+                    </a>
                 </div>
             </div>
         </div>

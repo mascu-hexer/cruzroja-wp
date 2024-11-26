@@ -19,7 +19,7 @@ if( have_rows('seccionesHome') ){
                 include 'profesionales.php';
                 break;
             case 'bannerPresupuesto':
-                include 'presupuesto.php';
+                include 'ctaPresupuesto.php';
                 break;
             /* case 'faq':
                 include 'faq.php';
