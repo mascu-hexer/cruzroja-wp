@@ -227,6 +227,7 @@ header{
             
     
             @media (min-width: $laptop) {
+                width: 100%;
                 flex-direction: row;
                 justify-content: center;
                 align-items: center;
@@ -1328,16 +1329,16 @@ main{
                                 }
                             }
             
-                            p {
+                            
+                            .new-review-text{
                                 font-family: "OpenSans";
                                 font-weight: 400;
                                 font-size: 18px;
                                 line-height: 27.12px;
                                 color: $corporative-text;
-                            }
-
-                            .new-review-text{
-
+                                p {
+                                }
+                                
                             }
                         }
                     }

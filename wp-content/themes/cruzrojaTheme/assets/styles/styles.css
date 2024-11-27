@@ -187,6 +187,7 @@ header .tirilla-header .info h3 a {
 }
 @media (min-width: 1024px) {
   header .tirilla-header .info {
+    width: 100%;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -1133,7 +1134,7 @@ main .reviews-slider .wrap-swiper .swiper .swiper-wrapper .swiper-slide .new-rev
   width: 24px;
   height: auto;
 }
-main .reviews-slider .wrap-swiper .swiper .swiper-wrapper .swiper-slide .new-review p {
+main .reviews-slider .wrap-swiper .swiper .swiper-wrapper .swiper-slide .new-review .new-review-text {
   font-family: "OpenSans";
   font-weight: 400;
   font-size: 18px;

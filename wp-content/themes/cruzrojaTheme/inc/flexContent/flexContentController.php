@@ -32,7 +32,7 @@ if( have_rows('seccionesHome') ){
                 break;
             case 'galeriaImagenes':
                 include 'galeriaImagenes.php';
-                break;
+                break; 
         }
     } 
 }
