@@ -16,13 +16,13 @@
         
         <div class="servicio">
             <div class="servicioContent">
-                <?php $image = get_field(('imagen'));
-                    if( !empty($image) ){
-                        $title = $image['title'];
-                        $alt = $image['alt'];
+                <?php $imagen = $servicio['imagen'];
+
+                    if( !empty($imagen) ){
+                        $title = $imagen['title'];
+                        $alt = $imagen['alt'];
                         $alt = ($alt)?$alt:$title; ?>
-                        <p>foto</p>
-                        <img src="<?php echo $image['url']; ?>" 
+                        <img src="<?php echo $imagen['url']; ?>" 
                             alt="<?php echo $alt; ?>" 
                             title="<?php echo $title; ?>" />
                     <?php }                 

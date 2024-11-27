@@ -1,5 +1,7 @@
 
-<footer>
+    
+    
+    <footer>
         <div class="more-info-container">
             <div class="more-info-content">
                 <div class="logo-hospital">

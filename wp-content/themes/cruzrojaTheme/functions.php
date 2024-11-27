@@ -14,7 +14,7 @@ function add_assets(){
         get_template_directory_uri() . '/assets/scripts/script.js', 
         array(), 
         null, 
-        true);
+        true); // parámetro true para que se cargue en el footer
     
     // Encolar el archivo CSS de Swiper
     wp_enqueue_style(
