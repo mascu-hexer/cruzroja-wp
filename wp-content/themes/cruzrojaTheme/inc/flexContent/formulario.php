@@ -5,10 +5,9 @@
 ?>
 <section class="header-form">
     <picture>
-        <source media="(min-width:1024px)" srcset="<?php echo esc_url($fondo['url']); ?>">
-        <!-- <source media="(min-width:750px)" srcset="assets/images/Rectangle158-desktop-1024.webp">
-        <source media="(min-width:500px)" srcset="assets/images/Rectangle158-mobile.webp"> -->
-        <img src="<?php echo esc_url($fondo['url']); ?>" alt="Paciente sonriendo">
+        <source media="(min-width:750px)" srcset="<?php echo esc_url($fondo['desktop']['url']); ?>">
+        <source media="(min-width:500px)" srcset="<?php echo esc_url($fondo['mobile']['url']); ?>">
+        <img src="<?php echo esc_url($fondo['mobile']['url']); ?>" alt="<?php echo esc_url($fondo['mobile']['alt']); ?>">
     </picture>          
     <div class="header-form-main-container">
         

@@ -3,7 +3,7 @@ $encabezado = get_sub_field('encabezado');
 ?>
 
 <section class="contact">
-    <div class="contact-main-container" id="frame42">                
+    <div class="contact-main-container" id="contact">                
         <form method="" action="" class="frame51">
             
             <div class="header-text">

@@ -1,4 +1,9 @@
+<?php
 
+$datos = get_field('datos', 'option');
+
+
+?>
     
     
     <footer>
@@ -19,40 +24,30 @@
                 
                 <div class="phone">
                     <h3>Teléfono</h3>
-                    <p>000 000 000</p>
+                    <p><?php echo esc_html($datos['telefono']); ?></p>
                 </div>
                 <div class="address">
-                    <p>P.º de la Victoria, s/n, 14004 Córdoba</p> 
+                    <p><?php echo esc_html($datos['direccion']); ?></p> 
                 </div>
                 <div class="rrss">
                     <h3>Síguenos</h3>
-                    <div class="rrss">
+                    <div class="logosRRSS">
                         <div class="logo">
-                        <?php
-                            // Verificar si el repetidor "Mensaje Top Header" tiene filas
-                            if (have_rows('iconoRRSS', 'option')) {
-                                echo '<div class="top-header-messages">';
-                                
-                                // Recorrer las filas del repetidor
-                                while (have_rows('iconoRRSS', 'option')) {
-                                    the_row();
-                                    
-                                    // Obtener el valor del subcampo "Linea1"
-                                    $icono1 = get_sub_field('iconoRRSS1');
-                                    
-                                    // Mostrar el contenido
-                                    if ($icono1) {
-                                        echo '<p>' . esc_html($icono1) . '</p>';
-                                    }
-                                }
-                                
-                                echo '</div>';
-                            }
-                            ?>
+                            <?php 
+                            $iconosRRSS = get_field('rrss', 'option'); 
+                                if (have_rows('rrss', 'option')):                                     
+                                    while (have_rows('rrss', 'option')): 
+                                        the_row();
+                                        $iconoRS = get_sub_field('iconoRS');
+                                        ?>
+                                        <a href="<?php echo esc_html($target);?>">
+                                            <img src="<?php echo $iconoRS['url']; ?>" alt="<?php echo $iconoRS['alt']; ?>" title="<?php echo $title; ?>" />
+                                        </a>
+                                    <?php 
+                                    endwhile;
+                                endif;?>         
                         </div>
-                        <div class="logo"><a href="#" target=""><img src="wp-content/themes/cruzrojaTheme/assets/images/youtube-ico.png" alt="youtube icon"></a></div>
-                        <div class="logo"><a href="#" target=""><img src="wp-content/themes/cruzrojaTheme/assets/images/facebook-ico.png" alt="facebook icon"></a></div>
-                        <div class="logo"><a href="#" target=""><img src="wp-content/themes/cruzrojaTheme/assets/images/instagram-ico.png" alt="instagram icon"></a></div>
+                        
                         
                         
                         
