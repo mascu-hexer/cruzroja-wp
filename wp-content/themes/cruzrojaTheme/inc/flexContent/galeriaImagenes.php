@@ -9,7 +9,6 @@
                 $imagenes[] = get_sub_field('imagenes'); 
             endwhile; 
             
-            // Verificar si hay imágenes suficientes para el diseño
             if (!empty($imagenes)): ?>
                 <div class="rectangle168">
                     <picture>                        

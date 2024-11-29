@@ -1,10 +1,4 @@
-<?php
-
-$datos = get_field('datos', 'option');
-
-
-?>
-    
+<?php $datos = get_field('datos', 'option'); ?>    
     
     <footer>
         <div class="more-info-container">
@@ -46,11 +40,7 @@ $datos = get_field('datos', 'option');
                                     <?php 
                                     endwhile;
                                 endif;?>         
-                        </div>
-                        
-                        
-                        
-                        
+                        </div>                
                     </div>
                 </div>
             </div>
@@ -59,10 +49,7 @@ $datos = get_field('datos', 'option');
             <div class="policies-container">
                 <div class="policies-content">
                     <div class="aviso-legal">
-                        <a href="#">Aviso Legal</a>
-                        <a href="#">Politica de privacidad</a>
-                        <a href="#">Política de cookies</a>
-                        <a href="#">Condiciones Generales</a>
+                        <?php $menuLinks = wp_nav_menu('footerMenu');?>
                     </div>
                 </div>
             </div>

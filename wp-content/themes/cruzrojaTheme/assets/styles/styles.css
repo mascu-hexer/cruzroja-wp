@@ -237,6 +237,7 @@ header .menu-header .frame39 .frame86 p {
   text-align: right;
 }
 header .menu-header .frame39 .frame86 a button {
+  font-family: "Montserrat";
   font-size: 18px;
   font-weight: 700;
   line-height: 21.94px;
@@ -249,6 +250,10 @@ header .menu-header .frame39 .frame86 a button {
   gap: 10px;
   background-color: #FFFFFF;
   cursor: pointer;
+}
+header .menu-header .frame39 .frame86 a button:hover {
+  background-color: #F5333F;
+  color: white;
 }
 @media (min-width: 1024px) {
   header .menu-header .frame39 {
@@ -271,6 +276,13 @@ header .menu-header .frame39 .frame86 a button {
     font-size: 20px;
     width: 542px;
     max-width: 100%;
+  }
+  header .menu-header .frame39 .frame86 a button {
+    font-family: "Montserrat";
+  }
+  header .menu-header .frame39 .frame86 a button:hover {
+    background-color: #F5333F;
+    color: white;
   }
 }
 header .menu-bar {
@@ -598,6 +610,9 @@ main .header-form .header-form-main-container .form-box .frame93 form .frame37 a
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   cursor: pointer;
 }
+main .header-form .header-form-main-container .form-box .frame93 form .frame37 a button:hover {
+  background-color: #D22C2C;
+}
 @media (min-width: 768px) {
   main .header-form {
     overflow: hidden;
@@ -752,6 +767,9 @@ main .servicios .servicios-main-container .servicio .servicioContent a {
   line-height: 21.94px;
   color: #F5333F;
   padding-top: 10px;
+}
+main .servicios .servicios-main-container .servicio .servicioContent a:hover {
+  color: #D22C2C;
 }
 @media (min-width: 1024px) {
   main .servicios {
@@ -960,6 +978,9 @@ main .budget .budget-container p {
   text-align: center;
   color: white;
 }
+main .budget .budget-container a {
+  width: 133px;
+}
 main .budget .budget-container a button {
   font-family: "Montserrat", sans-serif;
   font-size: 20px;
@@ -975,6 +996,10 @@ main .budget .budget-container a button {
   border: none;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+main .budget .budget-container a button:hover {
+  transform: scale(1.1);
 }
 @media (min-width: 1024px) {
   main .budget .budget-container {
@@ -1310,8 +1335,7 @@ main .contact .contact-main-container .frame51 .inputs-container .policy-checkbo
 }
 main .contact .contact-main-container .frame51 a button {
   background-color: #FFFFFF;
-  width: 100%;
-  max-width: 133px;
+  width: 133px;
   padding: 10px;
   gap: 10px;
   border: none;
@@ -1323,6 +1347,10 @@ main .contact .contact-main-container .frame51 a button {
   color: #011E41;
   text-align: center;
   cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+main .contact .contact-main-container .frame51 a button:hover {
+  transform: scale(1.1);
 }
 @media (min-width: 1024px) {
   main .contact {
@@ -1333,7 +1361,6 @@ main .contact .contact-main-container .frame51 a button {
     max-width: 100%;
     display: flex;
     margin: 0 auto;
-    gap: 80px;
     flex-direction: row;
     justify-content: center;
   }
@@ -1343,6 +1370,7 @@ main .contact .contact-main-container .frame51 a button {
     width: 100%;
     display: flex;
     flex-direction: row;
+    gap: 80px;
     margin: 0;
   }
   main .contact .contact-main-container .frame51 .header-text h3 {
@@ -1361,6 +1389,7 @@ main .contact .contact-main-container .frame51 a button {
     display: flex;
     flex-direction: row;
     gap: 80px;
+    padding: 0px;
   }
   main .contact .contact-main-container .frame51 .inputs-container .inputs-text {
     display: flex;
@@ -1527,22 +1556,36 @@ footer .more-info-container .more-info-content .rrss .logosRRSS .logo a img {
   max-width: 24px;
   max-height: 24px;
 }
+footer .more-info-container .more-info-content .rrss .logosRRSS .logo a:hover {
+  color: #D22C2C;
+  transform: scale(1.1);
+}
 footer .condiciones-footer .policies-container {
   margin-bottom: 15px;
 }
-footer .condiciones-footer .policies-container .policies-content .aviso-legal {
-  padding: 5%;
+footer .condiciones-footer .policies-container .policies-content .aviso-legal::before {
+  content: "";
+  display: block;
+  min-width: 100%;
+  justify-self: center;
+  height: 1px;
+  background-color: #ECECEC;
+}
+footer .condiciones-footer .policies-container .policies-content .aviso-legal ul {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  gap: 10px;
+  gap: 15px;
   justify-content: center;
 }
-footer .condiciones-footer .policies-container .policies-content .aviso-legal a {
+footer .condiciones-footer .policies-container .policies-content .aviso-legal ul li {
+  list-style: none;
+}
+footer .condiciones-footer .policies-container .policies-content .aviso-legal ul li a {
   font-family: "Montserrat";
+  line-height: 17.07px;
   font-size: 14px;
   font-weight: 400;
-  line-height: 17.07px;
   text-decoration: none;
   color: #011E41;
 }
@@ -1554,7 +1597,7 @@ footer .condiciones-footer .policies-container .policies-content .aviso-legal a 
     flex-direction: row;
     width: 100%;
     max-width: 1200px;
-    height: auto;
+    height: 127px;
     gap: 96px;
   }
   footer .more-info-container .more-info-content #logoCruzRoja {
