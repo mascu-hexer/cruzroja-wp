@@ -13,7 +13,6 @@
         <div class="tirilla-header hidden-header">
             <div class="info">
                 <p class="hidden-text"><?php echo esc_html(get_field('topHeader', 'option')['topHeaderLine1']); ?></p>
-                <!-- <h3> Te informamos gratis <a href="tel:+34957000000">957 000 000</a></h3> -->
                 <h3>
                     <?php echo esc_html( get_field('topHeader', 'option')['topHeaderLine2']); ?>
                     <span>
