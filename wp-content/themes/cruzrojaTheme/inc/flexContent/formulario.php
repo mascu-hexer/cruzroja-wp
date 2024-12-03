@@ -38,35 +38,8 @@
                 </div>
             <?php }?>
                                                                     
-            <div class="frame93">
-                <form method="" action="blank">
-                    <div class="frame37">
-                        <div class="frame36">
-                            <?php 
-                                echo do_shortcode($formulario['datosFormulario']); 
-                            ?>
-                            <!-- <input type="text" name="name" placeholder="Nombre*"/>
-                            <input type="text" name="phone" placeholder="Teléfono*"/>
-                            <input type="text" name="mail" placeholder="Email*"/>
-                            <div class="policy-checkbox">
-                                <input type="checkbox" name="privacy-policy"> 
-                                <p>He leído y Acepto las <a href="#">condiciones Generales</a> y la <a href="#">Política de privacidad</a></p>
-                            </div> -->
-                        </div>
-                        <?php $btnEnviar = $formulario['btnenviar'];
-                        if( $btnEnviar ):
-                            $url = $btnEnviar['url'];
-                            $title = $btnEnviar['title'];
-                            $target = $btnEnviar['target'] ? $link['target'] : '_self';
-                        ?> 
-                        
-                        <a href="<?php echo esc_url($url); ?>" target="<?php echo esc_html($target); ?>">
-                            <button><?php echo esc_html($title); ?></button>
-                        </a>  
-                        <?php endif; ?>
-                        
-                    </div>
-                </form>
+            <div class="inputsContainer">
+                <?php echo do_shortcode($formulario['datosFormulario']); ?>
             </div>    
         </div>
     </div>

@@ -458,6 +458,7 @@ main {
   flex-wrap: wrap;
 }
 main .header-form {
+  width: 100%;
   position: relative;
   overflow: hidden;
 }
@@ -473,14 +474,16 @@ main .header-form picture img, main .header-form picture source {
   display: block;
 }
 main .header-form .header-form-main-container {
+  width: 100%;
   position: relative;
   background-color: #011E41;
   padding: 20px 20px 47px 20px;
 }
 main .header-form .header-form-main-container .form-box {
+  width: 100%;
   margin-top: -47px;
   background-color: white;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 25px 10px rgba(0, 0, 0, 0.25);
 }
 main .header-form .header-form-main-container .form-box .titular {
   padding: 8px;
@@ -535,71 +538,159 @@ main .header-form .header-form-main-container .form-box .insight .frame32 .eleme
   font-size: 16px;
   line-height: 21.79px;
 }
-main .header-form .header-form-main-container .form-box .frame93 {
+main .header-form .header-form-main-container .form-box .inputsContainer {
   width: 100%;
   max-height: 100%;
   background-color: #F6F6F6;
   padding: 21.5px 27px;
+  /* form .frame37 {
+      h3 {
+          font-weight: 600;
+          font-size: 20px;
+          margin-bottom: 20px;
+      }
+
+      .frame36 {
+          display: flex;
+          flex-direction: column;
+
+          input {
+              width: 100%;
+              padding: 15px 16px;
+              border: 1px solid #ededed;
+              border-radius: 3px;
+              max-height: 45px;
+              margin-bottom: 10px;
+
+              &::placeholder {
+                  color: $form-placeholder;
+                  font-family: "OpenSans";
+                  font-size: 16px;
+                  font-weight: 400;
+                  line-height: 21.79px;
+              }
+          }
+
+          .policy-checkbox {
+              display: flex;
+              flex-wrap: nowrap;
+              font-family: "OpenSans";
+              font-size: 12px;
+              color: $form-placeholder;
+
+              input[type="checkbox"] {
+                  margin-right: 6px;
+                  width: 30px;
+                  height: auto;
+                  color: $form-placeholder;
+                  outline: none;
+              }
+
+              p {
+                  font-family: "OpenSans";
+                  font-size: 12px;
+                  font-weight: 400;
+                  line-height: 16.34px;
+
+                  a {
+                      font-weight: 700;
+                      text-decoration: none;
+                      color: $form-placeholder;
+                  }
+              }
+          }
+      }
+
+      a button {
+          width: 100%;
+          padding: 15px 16px;
+          background-color: $corporative-red;
+          color: white;
+          font-family: "Montserrat";
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 24.38px;
+          border: none;
+          border-radius: 3px;
+          margin-top: 20px;
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+          cursor: pointer;
+
+          &:hover {
+              background-color: #D22C2C;
+          }
+      }
+  } */
 }
-main .header-form .header-form-main-container .form-box .frame93 form .frame37 h3 {
+main .header-form .header-form-main-container .form-box .inputsContainer .solicitudInfo h3 {
+  font-family: "Montserrat";
   font-weight: 600;
   font-size: 20px;
+  color: #011E41;
   margin-bottom: 20px;
 }
-main .header-form .header-form-main-container .form-box .frame93 form .frame37 .frame36 {
+main .header-form .header-form-main-container .form-box .inputsContainer .solicitudInfo .inputsFields {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
-main .header-form .header-form-main-container .form-box .frame93 form .frame37 .frame36 input {
+main .header-form .header-form-main-container .form-box .inputsContainer .solicitudInfo .inputsFields input {
   width: 100%;
   padding: 15px 16px;
   border: 1px solid #ededed;
   border-radius: 3px;
   max-height: 45px;
-  margin-bottom: 10px;
+  margin-bottom: -10px;
 }
-main .header-form .header-form-main-container .form-box .frame93 form .frame37 .frame36 input::-moz-placeholder {
+main .header-form .header-form-main-container .form-box .inputsContainer .solicitudInfo .inputsFields input::-moz-placeholder {
   color: #B1B1B1;
   font-family: "OpenSans";
   font-size: 16px;
   font-weight: 400;
   line-height: 21.79px;
 }
-main .header-form .header-form-main-container .form-box .frame93 form .frame37 .frame36 input::placeholder {
+main .header-form .header-form-main-container .form-box .inputsContainer .solicitudInfo .inputsFields input::placeholder {
   color: #B1B1B1;
   font-family: "OpenSans";
   font-size: 16px;
   font-weight: 400;
   line-height: 21.79px;
 }
-main .header-form .header-form-main-container .form-box .frame93 form .frame37 .frame36 .policy-checkbox {
+main .header-form .header-form-main-container .form-box .inputsContainer .solicitudInfo .inputsFields .policy-checkbox {
   display: flex;
-  flex-wrap: nowrap;
-  font-family: "OpenSans";
-  font-size: 12px;
-  color: #B1B1B1;
+  flex-direction: row;
 }
-main .header-form .header-form-main-container .form-box .frame93 form .frame37 .frame36 .policy-checkbox input[type=checkbox] {
-  margin-right: 6px;
+main .header-form .header-form-main-container .form-box .inputsContainer .solicitudInfo .inputsFields .policy-checkbox span {
+  margin: 0;
+}
+main .header-form .header-form-main-container .form-box .inputsContainer .solicitudInfo .inputsFields .policy-checkbox label {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+main .header-form .header-form-main-container .form-box .inputsContainer .solicitudInfo .inputsFields .policy-checkbox label input[type=checkbox] {
   width: 30px;
-  height: auto;
+  height: 30px;
+  margin-right: 6px;
   color: #B1B1B1;
-  outline: none;
 }
-main .header-form .header-form-main-container .form-box .frame93 form .frame37 .frame36 .policy-checkbox p {
+main .header-form .header-form-main-container .form-box .inputsContainer .solicitudInfo .inputsFields .policy-checkbox label span {
   font-family: "OpenSans";
   font-size: 12px;
   font-weight: 400;
   line-height: 16.34px;
+  color: #B1B1B1;
 }
-main .header-form .header-form-main-container .form-box .frame93 form .frame37 .frame36 .policy-checkbox p a {
+main .header-form .header-form-main-container .form-box .inputsContainer .solicitudInfo .inputsFields .policy-checkbox label span a {
   font-weight: 700;
   text-decoration: none;
   color: #B1B1B1;
 }
-main .header-form .header-form-main-container .form-box .frame93 form .frame37 a button {
-  width: 100%;
-  padding: 15px 16px;
+main .header-form .header-form-main-container .form-box .inputsContainer .solicitudInfo .inputsFields input[type=submit] {
+  max-height: 50px;
   background-color: #F5333F;
   color: white;
   font-family: "Montserrat";
@@ -608,11 +699,11 @@ main .header-form .header-form-main-container .form-box .frame93 form .frame37 a
   line-height: 24.38px;
   border: none;
   border-radius: 3px;
-  margin-top: 20px;
+  vertical-align: center;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   cursor: pointer;
 }
-main .header-form .header-form-main-container .form-box .frame93 form .frame37 a button:hover {
+main .header-form .header-form-main-container .form-box .inputsContainer .solicitudInfo .inputsFields input[type=submit]:hover {
   background-color: #D22C2C;
 }
 @media (min-width: 768px) {
@@ -670,8 +761,7 @@ main .header-form .header-form-main-container .form-box .frame93 form .frame37 a
     height: 100%;
     max-height: 774px;
     margin: 0;
-    transform: translateY(40px);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    transform: translateY(33px);
   }
   main .header-form .header-form-main-container .form-box .titular {
     padding: 30.5px 31px;
@@ -699,7 +789,7 @@ main .header-form .header-form-main-container .form-box .frame93 form .frame37 a
     font-size: 18px;
     line-height: 24.51px;
   }
-  main .header-form .header-form-main-container .form-box .frame93 {
+  main .header-form .header-form-main-container .form-box .inputsContainer {
     padding: 18.5px 51.5px;
   }
 }
@@ -888,6 +978,7 @@ main .doctors .doctors-main-container picture {
   width: 100%;
   max-width: 100%;
   height: auto;
+  overflow: hidden;
 }
 main .doctors .doctors-main-container img {
   width: 100%;
@@ -896,12 +987,13 @@ main .doctors .doctors-main-container img {
      object-fit: contain;
   align-self: center;
   vertical-align: middle;
+  margin-bottom: 36px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
 main .doctors .doctors-main-container .text-container {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
 }
 main .doctors .doctors-main-container .text-container .doctorInfo {
   display: flex;
@@ -953,6 +1045,7 @@ main .doctors .doctors-main-container .text-container p {
     gap: 36px;
   }
   main .doctors .doctors-main-container img {
+    margin-bottom: 36px;
     width: 100%;
     max-width: 100%;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
@@ -1118,28 +1211,16 @@ main .reviews-slider .reviews-header::after {
   margin-bottom: 0px;
 }
 main .reviews-slider .wrap-swiper {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  flex-direction: row;
+  display: block;
   padding: 62px 20px 0px 20px;
-  gap: 10px;
   margin-bottom: 13px;
   background-color: #FAFAFA;
 }
 main .reviews-slider .wrap-swiper .swiper {
   padding-bottom: 98px;
-}
-main .reviews-slider .wrap-swiper .swiper .swiper-wrapper {
-  display: flex;
-  flex-direction: row;
-}
-main .reviews-slider .wrap-swiper .swiper .swiper-wrapper .swiper-slide {
-  display: flex;
-  flex-direction: column;
+  width: 100%;
   max-width: 100%;
-  margin: 0 auto;
-  gap: 10px;
+  overflow: hidden;
 }
 main .reviews-slider .wrap-swiper .swiper .swiper-wrapper .swiper-slide .new-review {
   display: flex;
@@ -1162,6 +1243,8 @@ main .reviews-slider .wrap-swiper .swiper .swiper-wrapper .swiper-slide .new-rev
 main .reviews-slider .wrap-swiper .swiper .swiper-wrapper .swiper-slide .new-review .new-review-header ul img {
   width: 24px;
   height: auto;
+  max-width: 100%;
+  display: block;
 }
 main .reviews-slider .wrap-swiper .swiper .swiper-wrapper .swiper-slide .new-review .new-review-text {
   font-family: "OpenSans";
@@ -1188,6 +1271,7 @@ main .reviews-slider .wrap-swiper .swiper .swiper-button-next, main .reviews-sli
 }
 @media (min-width: 1024px) {
   main .reviews-slider {
+    gap: 40px;
     display: flex;
     flex-direction: column;
     max-width: 1200px;
@@ -1258,6 +1342,8 @@ main .contact {
   width: 100%;
   height: 100%;
   padding: 21.5px;
+  padding-top: 28px;
+  padding-bottom: 28px;
   background-color: #F5333F;
 }
 main .contact .contact-main-container .frame51 {
@@ -1272,6 +1358,7 @@ main .contact .contact-main-container .frame51 {
 }
 main .contact .contact-main-container .frame51 .header-text {
   display: flex;
+  width: 100%;
   flex-direction: column;
   align-items: center;
 }
@@ -1280,7 +1367,6 @@ main .contact .contact-main-container .frame51 .header-text h3 {
   font-size: 25px;
   font-weight: 700;
   line-height: 30.48px;
-  gap: 0px;
   color: white;
 }
 main .contact .contact-main-container .frame51 .header-text p {
@@ -1293,76 +1379,98 @@ main .contact .contact-main-container .frame51 .header-text p {
 main .contact .contact-main-container .frame51 .inputs-container {
   display: flex;
   flex-direction: column;
-  padding: 0px 33.5px;
+  padding: 0px 45px;
+  gap: 10px;
 }
-main .contact .contact-main-container .frame51 .inputs-container .inputs-text input {
-  width: 100%;
-  min-height: 40px;
-  margin-bottom: 20px;
-  border: none;
-}
-main .contact .contact-main-container .frame51 .inputs-container .inputs-text input::-moz-placeholder {
-  font-family: "Montserrat";
-  font-size: 16px;
-  font-style: italic;
-  line-height: 19.5px;
-  font-weight: 400;
-  padding: 10px;
-}
-main .contact .contact-main-container .frame51 .inputs-container .inputs-text input::placeholder {
-  font-family: "Montserrat";
-  font-size: 16px;
-  font-style: italic;
-  line-height: 19.5px;
-  font-weight: 400;
-  padding: 10px;
-}
-main .contact .contact-main-container .frame51 .inputs-container .policy-checkbox {
-  width: 100%;
+main .contact .contact-main-container .frame51 .inputs-container .formulario {
   display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+main .contact .contact-main-container .frame51 .inputs-container .formulario .inputsFields {
+  max-width: 251px;
+  display: flex;
+  flex-direction: column;
+}
+main .contact .contact-main-container .frame51 .inputs-container .formulario .inputsFields .inputText input {
+  width: 100%;
+  height: 40px;
+  padding: 15px 16px;
+  border: 1px solid #ededed;
+  margin-bottom: 20px;
+}
+main .contact .contact-main-container .frame51 .inputs-container .formulario .inputsFields .inputText input::-moz-placeholder {
+  color: #B1B1B1;
+  font-family: "OpenSans";
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 21.79px;
+}
+main .contact .contact-main-container .frame51 .inputs-container .formulario .inputsFields .inputText input::placeholder {
+  color: #B1B1B1;
+  font-family: "OpenSans";
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 21.79px;
+}
+main .contact .contact-main-container .frame51 .inputs-container .formulario .inputsFields .policy-checkbox {
+  display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-items: center;
+  margin-bottom: 20px;
 }
-main .contact .contact-main-container .frame51 .inputs-container .policy-checkbox input[type=checkbox] {
-  margin-right: 6px;
-  width: 30px;
+main .contact .contact-main-container .frame51 .inputs-container .formulario .inputsFields .policy-checkbox span {
+  margin: 0;
+}
+main .contact .contact-main-container .frame51 .inputs-container .formulario .inputsFields .policy-checkbox label {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+main .contact .contact-main-container .frame51 .inputs-container .formulario .inputsFields .policy-checkbox label input[type=checkbox] {
+  width: 40px;
   height: 30px;
-  outline: none;
+  margin-right: 6px;
+  color: white;
 }
-main .contact .contact-main-container .frame51 .inputs-container .policy-checkbox p {
+main .contact .contact-main-container .frame51 .inputs-container .formulario .inputsFields .policy-checkbox label span {
   font-family: "OpenSans";
   font-size: 12px;
   font-weight: 400;
   line-height: 16.34px;
   color: white;
 }
-main .contact .contact-main-container .frame51 .inputs-container .policy-checkbox p a {
+main .contact .contact-main-container .frame51 .inputs-container .formulario .inputsFields .policy-checkbox label span a {
   font-weight: 700;
   text-decoration: none;
   color: white;
 }
-main .contact .contact-main-container .frame51 a button {
-  background-color: #FFFFFF;
+main .contact .contact-main-container .frame51 .inputs-container .formulario .btnSubmit {
+  display: flex;
+  justify-content: center;
+}
+main .contact .contact-main-container .frame51 .inputs-container .formulario .btnSubmit input[type=submit] {
   width: 133px;
-  padding: 10px;
-  gap: 10px;
-  border: none;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  font-family: "Montserrat", sans-serif;
+  height: 44px;
+  font-family: "Montserrat";
   font-size: 20px;
   font-weight: 700;
   line-height: 24.38px;
-  color: #011E41;
-  text-align: center;
+  border: none;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
   cursor: pointer;
-  transition: transform 0.3s ease-in-out;
-}
-main .contact .contact-main-container .frame51 a button:hover {
-  transform: scale(1.1);
+  background-color: white;
+  color: #011E41;
 }
 @media (min-width: 1024px) {
   main .contact {
-    width: 100%;
-    height: 100%;
+    padding-top: 21.5px;
+    padding-bottom: 21.5px;
   }
   main .contact .contact-main-container {
     max-width: 100%;
@@ -1372,53 +1480,50 @@ main .contact .contact-main-container .frame51 a button:hover {
     justify-content: center;
   }
   main .contact .contact-main-container .frame51 {
-    min-width: 440px;
-    max-width: 1051px;
-    width: 100%;
-    display: flex;
+    max-width: 1070px;
     flex-direction: row;
-    gap: 80px;
     margin: 0;
+    gap: 0;
   }
-  main .contact .contact-main-container .frame51 .header-text h3 {
-    font-family: "Montserrat";
-    font-size: 25px;
-    font-weight: 700;
-    line-height: 30.48px;
-  }
-  main .contact .contact-main-container .frame51 .header-text p {
-    font-size: 25px;
-    font-weight: 400;
-    font-style: italic;
-    line-height: 30.48px;
+  main .contact .contact-main-container .frame51 .header-text {
+    max-width: 318px;
+    margin-right: 80px;
   }
   main .contact .contact-main-container .frame51 .inputs-container {
-    display: flex;
     flex-direction: row;
-    gap: 80px;
     padding: 0px;
+    width: 100%;
   }
-  main .contact .contact-main-container .frame51 .inputs-container .inputs-text {
+  main .contact .contact-main-container .frame51 .inputs-container .formulario {
+    flex-direction: row;
+  }
+  main .contact .contact-main-container .frame51 .inputs-container .formulario .inputsFields {
+    max-width: 100%;
+    margin-right: 80px;
+  }
+  main .contact .contact-main-container .frame51 .inputs-container .formulario .inputsFields .inputText {
     display: flex;
     flex-direction: row;
     gap: 20px;
-    margin-bottom: 10px;
   }
-  main .contact .contact-main-container .frame51 .inputs-container .inputs-text input {
-    min-width: 200px;
-    max-width: 200px;
-    width: 100%;
-    margin-bottom: 0px;
+  main .contact .contact-main-container .frame51 .inputs-container .formulario .inputsFields .inputText input {
+    width: 200px;
   }
-  main .contact .contact-main-container .frame51 .inputs-container .policy-checkbox {
-    margin-bottom: 0px;
+  main .contact .contact-main-container .frame51 .inputs-container .formulario .inputsFields .policy-checkbox {
+    margin-bottom: 0;
   }
-  main .contact .contact-main-container .frame51 .inputs-container .policy-checkbox input[type=checkbox] {
+  main .contact .contact-main-container .frame51 .inputs-container .formulario .inputsFields .policy-checkbox label {
+    margin: 0;
+    align-items: center;
+  }
+  main .contact .contact-main-container .frame51 .inputs-container .formulario .inputsFields .policy-checkbox label input[type=checkbox] {
     width: 20px;
     height: 20px;
+    margin-right: 6px;
+    color: white;
   }
-  main .contact .contact-main-container .frame51 button {
-    align-self: flex-start;
+  main .contact .contact-main-container .frame51 .inputs-container .formulario .btnSubmit {
+    margin: 0;
   }
 }
 main .pictures-results {
@@ -1448,13 +1553,11 @@ main .pictures-results .pictures-main-container .rectangle168 {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 100%;
 }
 main .pictures-results .pictures-main-container .frame79 {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 100%;
   height: 100%;
   max-height: 100%;
   gap: 5px;
@@ -1462,12 +1565,13 @@ main .pictures-results .pictures-main-container .frame79 {
 main .pictures-results .pictures-main-container .frame79 .frame78 {
   display: flex;
   width: 100%;
-  max-width: 100%;
   height: 100%;
-  max-height: 100%;
   gap: 5px;
 }
 @media (min-width: 1024px) {
+  main .pictures-results {
+    padding: 136px 0px;
+  }
   main .pictures-results .pictures-main-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1475,6 +1579,7 @@ main .pictures-results .pictures-main-container .frame79 .frame78 {
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
+    padding: 0;
   }
   main .pictures-results .pictures-main-container .frame79 {
     display: flex;
@@ -1583,6 +1688,7 @@ footer .condiciones-footer .policies-container .policies-content .aviso-legal ul
   flex-direction: row;
   flex-wrap: nowrap;
   gap: 15px;
+  margin: 0px 29px;
   justify-content: center;
 }
 footer .condiciones-footer .policies-container .policies-content .aviso-legal ul li {
