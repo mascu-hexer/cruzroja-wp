@@ -56,7 +56,7 @@ h1{
 
 body {
     font-family: "Montserrat", sans-serif;
-    min-width: $mobile_m;
+    //min-width: $mobile_m;
 }
 
 .acordeon {
@@ -71,6 +71,7 @@ body {
         cursor: pointer;
         border: 1px solid #EDEDED;
         transition: all 300ms ease;
+        height: 69px;
 
         p {
             font-size: 18px;
@@ -125,6 +126,7 @@ body {
 
     input[type="checkbox"]:checked + label {
         border: none;
+        background-color: #F5333F1A;
     }
 
     .btn-acordeon {
@@ -274,6 +276,7 @@ header{
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
+                margin-bottom: 10px;
                 gap: 18px;
 
                 p{
@@ -296,7 +299,8 @@ header{
                     max-height: 40px;
                     padding: 10px;
                     border: 1px solid $corporative-red;
-                    gap: 10px;
+                    /* margin-top: 10px;
+                    margin-bottom: 10px; */
                     background-color: #FFFFFF;
                     cursor: pointer;
 
@@ -325,6 +329,7 @@ header{
                 .frame86{
                     display: flex;
                     align-items: center;
+                    margin-bottom: 0px;
 
                     p{
                         font-size: 20px;
@@ -546,7 +551,6 @@ header{
 main{
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
 
     .header-form {
         width: 100%;
@@ -575,6 +579,7 @@ main{
 
             .form-box {
                 width: 100%;
+                height: auto;
                 margin-top: -47px;
                 background-color: white;
                 box-shadow: 0px 25px 10px rgba(0, 0, 0, 0.25);
@@ -662,6 +667,10 @@ main{
                             flex-direction: column;
                             width: 100%;
 
+                            span.wpcf7-not-valid-tip {                                
+                                margin-top: 20px;
+                            }
+
                             input {
                                 width: 100%;
                                 padding: 15px 16px;
@@ -741,84 +750,7 @@ main{
                         }
                     }
 
-                    /* form .frame37 {
-                        h3 {
-                            font-weight: 600;
-                            font-size: 20px;
-                            margin-bottom: 20px;
-                        }
-
-                        .frame36 {
-                            display: flex;
-                            flex-direction: column;
-
-                            input {
-                                width: 100%;
-                                padding: 15px 16px;
-                                border: 1px solid #ededed;
-                                border-radius: 3px;
-                                max-height: 45px;
-                                margin-bottom: 10px;
-
-                                &::placeholder {
-                                    color: $form-placeholder;
-                                    font-family: "OpenSans";
-                                    font-size: 16px;
-                                    font-weight: 400;
-                                    line-height: 21.79px;
-                                }
-                            }
-
-                            .policy-checkbox {
-                                display: flex;
-                                flex-wrap: nowrap;
-                                font-family: "OpenSans";
-                                font-size: 12px;
-                                color: $form-placeholder;
-
-                                input[type="checkbox"] {
-                                    margin-right: 6px;
-                                    width: 30px;
-                                    height: auto;
-                                    color: $form-placeholder;
-                                    outline: none;
-                                }
-
-                                p {
-                                    font-family: "OpenSans";
-                                    font-size: 12px;
-                                    font-weight: 400;
-                                    line-height: 16.34px;
-                                    
-                                    a {
-                                        font-weight: 700;
-                                        text-decoration: none;
-                                        color: $form-placeholder;
-                                    }
-                                }
-                            }
-                        }
-
-                        a button {
-                            width: 100%;
-                            padding: 15px 16px;
-                            background-color: $corporative-red;
-                            color: white;
-                            font-family: "Montserrat";
-                            font-size: 20px;
-                            font-weight: 700;
-                            line-height: 24.38px;
-                            border: none;
-                            border-radius: 3px;
-                            margin-top: 20px;
-                            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-                            cursor: pointer;
-
-                            &:hover {
-                                background-color: #D22C2C;
-                            }
-                        }
-                    } */
+                    
                 }
             }
         }
@@ -1478,6 +1410,7 @@ main{
                     background-color: transparent;
                     transition: background-color 0.3s ease;
                     margin-bottom: 60px;
+                    margin:10.5px;
                 }
                 
                 .swiper-pagination-bullet-active {
@@ -1870,7 +1803,9 @@ main{
 }
 
 footer{
-    
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 
     &::before {
         content: "";
@@ -1925,8 +1860,9 @@ footer{
                 max-width: 100%;
                 flex-direction: column;
                 align-items: center;
-                p{
-                    max-width: 100%;     
+                a{
+                    text-decoration: none;
+                    color: $corporative-text;    
                 }
             }
 
@@ -1937,20 +1873,20 @@ footer{
             }
 
             .rrss {
+                margin-bottom: 10px;
                 h3{
                     text-align: center;
+                    margin-bottom: 10px;
                 }
                 .logosRRSS{
                     display: flex;
                     flex-direction: row;
-                    gap: 15px;
-
 
                     .logo {
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        gap:10px;
+                        gap:15px;
                         
                         a{
                             img{
@@ -1970,27 +1906,21 @@ footer{
     .condiciones-footer{
         .policies-container{
             margin-bottom: 15px;
+            justify-content: center;
             .policies-content{
                 .aviso-legal{
 
-                    &::before {
-                        content: "";
-                        display: block;
-                        min-width: 100%;
-                        justify-self: center;        
-                        height: 1px;
-                        background-color: #ECECEC;
-                    }
                     ul{
                         display: flex;
                         flex-direction: row;
                         flex-wrap: nowrap;
-                        gap:15px;
+                        gap:8px;
                         margin: 0px 29px;
                         justify-content: center;
 
                         li{
                             list-style: none;
+                            max-width: max-content;
                             a{
                                 font-family: "Montserrat";
                                 line-height: 17.07px;
@@ -2007,6 +1937,8 @@ footer{
         }
     }
     @media (min-width: $laptop) {
+        gap:0;
+
         .more-info-container{
             align-items: center;
             .more-info-content{
@@ -2051,13 +1983,26 @@ footer{
             }
         }
         .condiciones-footer {
-            margin-bottom: 15px;
+            //margin-bottom: 15px;
 
             .policies-container .policies-content .aviso-legal{
                 padding:0px;
                 line-height: 46px;
                 gap: 15px;
-                margin-bottom: 15px;
+                //margin-bottom: 15px;
+
+                ul{
+                    gap:15px;
+                }
+
+                &::before {
+                    content: "";
+                    display: block;
+                    min-width: 100%;
+                    justify-self: center;        
+                    height: 1px;
+                    background-color: #ECECEC;
+                }
 
             }
         }    

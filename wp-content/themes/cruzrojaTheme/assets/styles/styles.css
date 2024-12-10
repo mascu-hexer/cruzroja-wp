@@ -36,7 +36,6 @@ h1 {
 
 body {
   font-family: "Montserrat", sans-serif;
-  min-width: 375px;
 }
 
 .acordeon {
@@ -51,6 +50,7 @@ body {
   cursor: pointer;
   border: 1px solid #EDEDED;
   transition: all 300ms ease;
+  height: 69px;
 }
 .acordeon label p {
   font-size: 18px;
@@ -98,6 +98,7 @@ body {
 }
 .acordeon input[type=checkbox]:checked + label {
   border: none;
+  background-color: rgba(245, 51, 63, 0.1019607843);
 }
 .acordeon .btn-acordeon {
   display: none;
@@ -226,6 +227,7 @@ header .menu-header .frame39 .frame86 {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin-bottom: 10px;
   gap: 18px;
 }
 header .menu-header .frame39 .frame86 p {
@@ -247,7 +249,8 @@ header .menu-header .frame39 .frame86 a button {
   max-height: 40px;
   padding: 10px;
   border: 1px solid #F5333F;
-  gap: 10px;
+  /* margin-top: 10px;
+  margin-bottom: 10px; */
   background-color: #FFFFFF;
   cursor: pointer;
 }
@@ -271,6 +274,7 @@ header .menu-header .frame39 .frame86 a button:hover {
   header .menu-header .frame39 .frame86 {
     display: flex;
     align-items: center;
+    margin-bottom: 0px;
   }
   header .menu-header .frame39 .frame86 p {
     font-size: 20px;
@@ -455,7 +459,6 @@ header .menu-bar .nav-bar.show li::after {
 main {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
 }
 main .header-form {
   width: 100%;
@@ -481,6 +484,7 @@ main .header-form .header-form-main-container {
 }
 main .header-form .header-form-main-container .form-box {
   width: 100%;
+  height: auto;
   margin-top: -47px;
   background-color: white;
   box-shadow: 0px 25px 10px rgba(0, 0, 0, 0.25);
@@ -543,84 +547,6 @@ main .header-form .header-form-main-container .form-box .inputsContainer {
   max-height: 100%;
   background-color: #F6F6F6;
   padding: 21.5px 27px;
-  /* form .frame37 {
-      h3 {
-          font-weight: 600;
-          font-size: 20px;
-          margin-bottom: 20px;
-      }
-
-      .frame36 {
-          display: flex;
-          flex-direction: column;
-
-          input {
-              width: 100%;
-              padding: 15px 16px;
-              border: 1px solid #ededed;
-              border-radius: 3px;
-              max-height: 45px;
-              margin-bottom: 10px;
-
-              &::placeholder {
-                  color: $form-placeholder;
-                  font-family: "OpenSans";
-                  font-size: 16px;
-                  font-weight: 400;
-                  line-height: 21.79px;
-              }
-          }
-
-          .policy-checkbox {
-              display: flex;
-              flex-wrap: nowrap;
-              font-family: "OpenSans";
-              font-size: 12px;
-              color: $form-placeholder;
-
-              input[type="checkbox"] {
-                  margin-right: 6px;
-                  width: 30px;
-                  height: auto;
-                  color: $form-placeholder;
-                  outline: none;
-              }
-
-              p {
-                  font-family: "OpenSans";
-                  font-size: 12px;
-                  font-weight: 400;
-                  line-height: 16.34px;
-
-                  a {
-                      font-weight: 700;
-                      text-decoration: none;
-                      color: $form-placeholder;
-                  }
-              }
-          }
-      }
-
-      a button {
-          width: 100%;
-          padding: 15px 16px;
-          background-color: $corporative-red;
-          color: white;
-          font-family: "Montserrat";
-          font-size: 20px;
-          font-weight: 700;
-          line-height: 24.38px;
-          border: none;
-          border-radius: 3px;
-          margin-top: 20px;
-          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-          cursor: pointer;
-
-          &:hover {
-              background-color: #D22C2C;
-          }
-      }
-  } */
 }
 main .header-form .header-form-main-container .form-box .inputsContainer .solicitudInfo h3 {
   font-family: "Montserrat";
@@ -633,6 +559,9 @@ main .header-form .header-form-main-container .form-box .inputsContainer .solici
   display: flex;
   flex-direction: column;
   width: 100%;
+}
+main .header-form .header-form-main-container .form-box .inputsContainer .solicitudInfo .inputsFields span.wpcf7-not-valid-tip {
+  margin-top: 20px;
 }
 main .header-form .header-form-main-container .form-box .inputsContainer .solicitudInfo .inputsFields input {
   width: 100%;
@@ -1262,6 +1191,7 @@ main .reviews-slider .wrap-swiper .swiper .swiper-pagination-bullet {
   background-color: transparent;
   transition: background-color 0.3s ease;
   margin-bottom: 60px;
+  margin: 10.5px;
 }
 main .reviews-slider .wrap-swiper .swiper .swiper-pagination-bullet-active {
   background-color: black;
@@ -1592,6 +1522,11 @@ main .pictures-results .pictures-main-container .frame79 .frame78 {
   }
 }
 
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
 footer::before {
   content: "";
   display: block;
@@ -1642,27 +1577,31 @@ footer .more-info-container .more-info-content .phone {
   flex-direction: column;
   align-items: center;
 }
-footer .more-info-container .more-info-content .phone p {
-  max-width: 100%;
+footer .more-info-container .more-info-content .phone a {
+  text-decoration: none;
+  color: #323232;
 }
 footer .more-info-container .more-info-content .address {
   width: 100%;
   max-width: 55%;
   justify-items: center;
 }
+footer .more-info-container .more-info-content .rrss {
+  margin-bottom: 10px;
+}
 footer .more-info-container .more-info-content .rrss h3 {
   text-align: center;
+  margin-bottom: 10px;
 }
 footer .more-info-container .more-info-content .rrss .logosRRSS {
   display: flex;
   flex-direction: row;
-  gap: 15px;
 }
 footer .more-info-container .more-info-content .rrss .logosRRSS .logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 15px;
 }
 footer .more-info-container .more-info-content .rrss .logosRRSS .logo a img {
   max-width: 24px;
@@ -1674,25 +1613,20 @@ footer .more-info-container .more-info-content .rrss .logosRRSS .logo a:hover {
 }
 footer .condiciones-footer .policies-container {
   margin-bottom: 15px;
-}
-footer .condiciones-footer .policies-container .policies-content .aviso-legal::before {
-  content: "";
-  display: block;
-  min-width: 100%;
-  justify-self: center;
-  height: 1px;
-  background-color: #ECECEC;
+  justify-content: center;
 }
 footer .condiciones-footer .policies-container .policies-content .aviso-legal ul {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  gap: 15px;
+  gap: 8px;
   margin: 0px 29px;
   justify-content: center;
 }
 footer .condiciones-footer .policies-container .policies-content .aviso-legal ul li {
   list-style: none;
+  max-width: -moz-max-content;
+  max-width: max-content;
 }
 footer .condiciones-footer .policies-container .policies-content .aviso-legal ul li a {
   font-family: "Montserrat";
@@ -1703,6 +1637,9 @@ footer .condiciones-footer .policies-container .policies-content .aviso-legal ul
   color: #011E41;
 }
 @media (min-width: 1024px) {
+  footer {
+    gap: 0;
+  }
   footer .more-info-container {
     align-items: center;
   }
@@ -1743,13 +1680,20 @@ footer .condiciones-footer .policies-container .policies-content .aviso-legal ul
   footer .more-info-container .more-info-content .rrss h3 {
     text-align: left;
   }
-  footer .condiciones-footer {
-    margin-bottom: 15px;
-  }
   footer .condiciones-footer .policies-container .policies-content .aviso-legal {
     padding: 0px;
     line-height: 46px;
     gap: 15px;
-    margin-bottom: 15px;
+  }
+  footer .condiciones-footer .policies-container .policies-content .aviso-legal ul {
+    gap: 15px;
+  }
+  footer .condiciones-footer .policies-container .policies-content .aviso-legal::before {
+    content: "";
+    display: block;
+    min-width: 100%;
+    justify-self: center;
+    height: 1px;
+    background-color: #ECECEC;
   }
 }/*# sourceMappingURL=styles.css.map */

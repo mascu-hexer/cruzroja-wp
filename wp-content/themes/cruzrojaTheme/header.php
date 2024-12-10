@@ -8,7 +8,7 @@
     <?php wp_head(); ?>    
     
 </head>
-<body>
+<body <?php body_class(); ?>>
     <header class="sticky-header">        
         <div class="tirilla-header hidden-header">
             <div class="info">
@@ -16,7 +16,7 @@
                 <h3>
                     <?php echo esc_html( get_field('topHeader', 'option')['topHeaderLine2']); ?>
                     <span>
-                        <a href="tel:<?php the_field('datos', 'option')['telefono']; ?>">
+                        <a href="tel:+34<?php echo get_field('datos', 'option')['telefono']; ?>" class="phone-number">
                             <?php echo esc_html( get_field('datos', 'option')['telefono']); ?>
                         </a>
                     </span>

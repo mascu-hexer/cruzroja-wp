@@ -9,9 +9,7 @@
         <source media="(min-width:500px)" srcset="<?php echo esc_url($fondo['mobile']['url']); ?>">
         <img src="<?php echo esc_url($fondo['mobile']['url']); ?>" alt="<?php echo esc_url($fondo['mobile']['alt']); ?>">
     </picture>          
-    <div class="header-form-main-container">
-        
-                                
+    <div class="header-form-main-container">    
         <div class="form-box">
             <div class="titular">
                 <div class="frame33">

@@ -45,4 +45,11 @@ document.addEventListener('DOMContentLoaded', function() {
             disableOnInteraction: false,
           },
     });
+
+    var phoneNumberElements = document.querySelectorAll('.phone-number');
+    phoneNumberElements.forEach(function(phoneNumberElement) {
+        var phoneNumber = phoneNumberElement.textContent;
+        var formattedNumber = phoneNumber.replace(/(\d{3})(?=\d)/g, '$1 ');
+        phoneNumberElement.textContent = formattedNumber;
+    });
 });

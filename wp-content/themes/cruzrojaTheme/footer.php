@@ -18,7 +18,9 @@
                 
                 <div class="phone">
                     <h3>Teléfono</h3>
-                    <p><?php echo esc_html($datos['telefono']); ?></p>
+                    <a href="tel:+34<?php echo get_field('datos', 'option')['telefono']; ?>" class="phone-number">
+                        <?php echo esc_html( get_field('datos', 'option')['telefono']); ?>
+                    </a>
                 </div>
                 <div class="address">
                     <p><?php echo esc_html($datos['direccion']); ?></p> 
@@ -32,10 +34,10 @@
                                 if (have_rows('rrss', 'option')):                                     
                                     while (have_rows('rrss', 'option')): 
                                         the_row();
-                                        $iconoRS = get_sub_field('iconoRS');
+                                        $iconoRS = get_sub_field('iconoRS');                                        
                                         ?>
-                                        <a href="<?php echo esc_html($target);?>">
-                                            <img src="<?php echo $iconoRS['url']; ?>" alt="<?php echo $iconoRS['alt']; ?>" title="<?php echo $title; ?>" />
+                                        <a href="<?php echo $iconoRS['urlRedSocial'];?>" target="blank">
+                                            <img src="<?php echo $iconoRS['iconoRS']['url']; ?>" alt="<?php echo $iconoRS['iconoRS']['alt'];?>" title="<?php echo $iconoRS['iconoRS']['title']; ?>" />
                                         </a>
                                     <?php 
                                     endwhile;
